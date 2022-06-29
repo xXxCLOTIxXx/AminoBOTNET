@@ -1,0 +1,43 @@
+
+English:
+
+1) Subscribe to the author on YouTube and GitHub, join the discord server and telegram channel :>
+
+Youtube: https://www.youtube.com/channel/UCNKEgQmAvt6dD7jeMLpte9Q
+Telegram channel: https://t.me/DxsarzUnion
+Discord server: https://discord.com/invite/GtpUnsHHT4
+GitHub: https://github.com/xXxCLOTIxXx
+
+2) Fill in the file accounts.json with your accounts (according to the standard 4 examples, but you can increase the number)
+
+3) Install the necessary libraries if they are not installed (See file Libraries_needed_for_work.txt  )
+
+4) Run the file main.py and enter the login and password from the account from which the community selection for the raid will go and enter a couple more parameters
+
+5) Enjoy! :>
+
+
+
+
+
+Русский:
+
+
+1) Подпишитесь на автора на YouTube и GitHub, присоединяйтесь к дискорд серверу и телеграм каналу :>
+
+YouTube: https://www.youtube.com/channel/UCNKEgQmAvt6dD7jeMLpte9Q
+Телеграмм канал: https://t.me/DxsarzUnion
+Дискорд сервер: https://discord.com/invite/GtpUnsHHT4
+Гитхаб: https://github.com/xXxCLOTIxXx
+
+2) Заполнить файл accounts.json своими аккаунтами (по стандартным 4 примерам, но можно увеличить количество)
+
+3) Установите необходимые библиотеки, если они не установлены (см. файл  Libraries_needed_for_work.txt )
+
+4) Запускаем файл main.py и вводим логин и пароль от аккаунта с которого будет идти подбор сообщества для рейда и вводим еще пару параметров
+
+5) Наслаждайтесь! :>
+
+
+
+Made by Xsarz - @DXsarz

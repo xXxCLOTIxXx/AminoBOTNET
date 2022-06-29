@@ -1,0 +1,9 @@
+Install libraries:
+colored
+requests
+
+
+
+Установить библиотеки:
+colored
+requests

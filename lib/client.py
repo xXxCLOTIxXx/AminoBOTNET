@@ -113,3 +113,12 @@ class Client():
 		response = self.session.get(f"{self.api}/x{comId}/s/chat/thread?type=public-all&filterType={type}&start={start}&size={size}", headers=self.headers())
 		if response.status_code != 200: raise Exception(json.loads(response.text))
 		else: return json.loads(response.text)["threadList"]
+
+	def change_profile(self, comId: str, name: str = None, content: str = None):
+		data = {"timestamp": int(timestamp() * 1000)}
+		if name!=None: data["nickname"] = name
+		if content!=None: data["content"] = content
+		data = json.dumps(data)
+		response = self.session.post(f"{self.api}/x{comId}/s/user-profile/{self.uid}", headers=self.headers(data=data), data=data)
+		if response.status_code != 200: return Exception(json.loads(response.text))
+		else:return response.status_code

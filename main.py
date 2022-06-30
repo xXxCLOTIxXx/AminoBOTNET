@@ -39,7 +39,10 @@ for chats_ in client.get_public_chat_threads(size=100, comId=comId):
 
 def spam(client, chatId):
 	while True:
-		client.send_message(chatId=chatId, comId=comId, message=message, messageType=messageType)
+		try:
+			Thread(target=client.send_message, args=(chatId, comId, message, messageType)).start()
+		except:break
+	while True:client.send_message(chatId=chatId, comId=comId, message=message, messageType=messageType)
 
 def start_bots(account):
 	try:
@@ -47,9 +50,10 @@ def start_bots(account):
 		gmail = account['email']
 		password = account['password']
 		bot_client.login(email=gmail, password=password); print(fore.GREEN, f"\n{gmail}: Successful login\n", fore.PURPLE_3)
-		bot_client.join_community(comId=comId); print(fore.GREEN, f"\n{gmail}: Successful join community\n", fore.PURPLE_3)
 		for i in range(len(chats)):
 			try:bot_client.join_chat(comId=comId, chatId=chats[i])
+			except:pass
+			try:client.change_profile(comId=comId, name='Free scripts -> @DXsarz | Бесплатные скрипты -> @DXsarz', content=open("antiban.txt", encoding='utf-8').read())
 			except:pass
 		print(fore.GREEN, f"\n{gmail}: Successful join all chats\n{gmail}: I start spamming...\n", fore.PURPLE_3)
 		for i in range(len(chats)): Thread(target=spam, args=(bot_client, chats[i])).start()
